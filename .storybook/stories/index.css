@@ -1,0 +1,139 @@
+/* 
+// Examples Stylesheet
+// -------------------
+*/
+
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #08c;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+	padding: 1em;
+}
+
+.footer {
+	margin-top: 50px;
+	border-top: 1px solid #eee;
+	padding: 20px 0;
+	font-size: 12px;
+	color: #999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #222;
+	font-weight: 100;
+	margin: 0.5em 0;
+}
+
+label {
+	color: #999;
+	display: inline-block;
+	font-size: 0.85em;
+	font-weight: bold;
+	margin: 1em 0;
+	text-transform: uppercase;
+}
+
+.hint {
+	margin: 15px 0;
+	font-style: italic;
+	color: #999;
+}
+
+.customPrimaryBtn{
+  font-family: Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  color: var(--mdc-theme-text-primary-on-light, rgba(0, 0, 0, 0.87));
+  display: inline-block;
+  position: relative;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+  min-width: 88px;
+  margin-left: 1rem;
+  cursor: pointer;
+	background-color: #05bb1b;
+  background-color: var(--mdc-theme-primary, #05bb1b);
+  color: white;
+  color: var(--mdc-theme-text-primary-on-primary, white);
+}
+
+.customDeleteBtn{
+  font-family: Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  color: var(--mdc-theme-text-primary-on-light, rgba(0, 0, 0, 0.87));
+  display: inline-block;
+  position: relative;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+  min-width: 88px;
+  margin-left: 1rem;
+  cursor: pointer;
+	background-color: #d81111;
+  background-color: var(--mdc-theme-primary, #d81111);
+  color: white;
+  color: var(--mdc-theme-text-primary-on-primary, white);
+}
