@@ -24,8 +24,9 @@ class Rule extends React.Component {
     this.node = this.treeHelper.getNodeByName(this.props.nodeName);
     this.styles = this.props.styles;
 
+    let field = this.getFieldByName(this.node.field);
     this.state = {
-      currField: this.generateRuleObject(this.props.fields[0], this.node),
+      currField: this.generateRuleObject(field, this.node),
       validationError: false,
     };
   }
@@ -83,7 +84,7 @@ class Rule extends React.Component {
           }
         </div>);
       case 'select': return (
-        <select className={this.styles.select} onChange={this.onInputChanged}>
+        <select className={this.styles.select} onChange={this.onInputChanged} value={this.node.value}>
           {this.state.currField.input.options.map((option, index) =>
             <option value={option.value} key={index}>{option.name}</option>)}
         </select>);
