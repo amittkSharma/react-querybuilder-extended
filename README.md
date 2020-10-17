@@ -14,7 +14,7 @@ React query builder is easily configurable and flexible expression builder compo
 ```typescript
 
 import React, { Component } from 'react';
-    import TwoWayQuerybuilder from 'react-querybuilder-extended';
+    import QuerybuilderExtended from 'react-querybuilder-extended';
 
     const fields = [
       { name: 'firstName', operators: 'all', label: 'First Name', input: { type: 'text' } },
@@ -30,7 +30,7 @@ import React, { Component } from 'react';
 
         render() {
             return (
-                 <TwoWayQuerybuilder fields={fields} onChange={this.handleChange} />
+                 <QuerybuilderExtended fields={fields} onChange={this.handleChange} />
             );
         }
     }
