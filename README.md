@@ -14,28 +14,27 @@ React query builder is easily configurable and flexible expression builder compo
 ```typescript
 
 import React, { Component } from 'react';
-    import QuerybuilderExtended from 'react-querybuilder-extended';
+import QuerybuilderExtended from 'react-querybuilder-extended';
 
-    const fields = [
-      { name: 'firstName', operators: 'all', label: 'First Name', input: { type: 'text' } },
-      { name: 'lastName', operators: 'all', label: 'Last Name', input: { type: 'text' } },
-      { name: 'age', operators: 'all', label: 'Age', input: { type: 'text' } },
-    ];
+const fields = [
+ { name: 'firstName', operators: 'all', label: 'First Name', input: { type: 'text' } },
+ { name: 'lastName', operators: 'all', label: 'Last Name', input: { type: 'text' } },
+ { name: 'age', operators: 'all', label: 'Age', input: { type: 'text' } },
+];
 
-    class App extends Component {
+class App extends Component {
 
-        handleChange(event) {
-          console.log('query', event.query);
-        }
-
-        render() {
-            return (
-                 <QuerybuilderExtended fields={fields} onChange={this.handleChange} />
-            );
-        }
+    handleChange(event) {
+      console.log('query', event.query);
     }
 
-    export default App;
+    render() {
+        return (
+             <QuerybuilderExtended fields={fields} onChange={this.handleChange} />
+        );
+    }
+}
+export default App;
 
 ```
 
