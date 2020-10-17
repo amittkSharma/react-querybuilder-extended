@@ -1,3 +1,3 @@
-import QuerybuilderExtended from './QuerybuilderExtended';
+import QuerybuilderExtended from './QuerybuilderExtended'
 
-export default QuerybuilderExtended;
+export default QuerybuilderExtended
