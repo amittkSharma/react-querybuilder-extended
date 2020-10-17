@@ -61,7 +61,11 @@ class Condition extends React.Component {
   render() {
     return (
       <div className={this.styles.condition}>
-        <select value={this.state.data.combinator} className={this.styles.select} onChange={this.combinatorChange}>
+        <select
+          value={this.state.data.combinator}
+          className={this.styles.select}
+          onChange={this.combinatorChange}
+        >
           {this
             .props
             .config
@@ -80,7 +84,8 @@ class Condition extends React.Component {
           ? <button
             type="button"
             onClick={() => this.handleDelete(this.props.nodeName)}
-            className={this.styles.deleteBtn}>{this.props.buttonsText.delete}</button>
+            className={this.styles.deleteBtn}
+          > {this.props.buttonsText.delete}</button>
           : null}
         {this
           .state
@@ -88,25 +93,27 @@ class Condition extends React.Component {
           .rules
           .map((rule, index) => {
             if (rule.field) {
-              return (<Rule
-                key={index}
-                buttonsText={this.props.buttonsText}
-                fields={this.props.fields}
-                operators={this.props.config.operators}
-                nodeName={rule.nodeName}
-                data={this.props.data}
-                onChange={this.handleChildUpdate}
-                styles={this.props.config.styles} />);
-            } else {
-              return (<Condition
-                key={index}
-                config={this.props.config}
-                buttonsText={this.props.buttonsText}
-                fields={this.props.fields}
-                nodeName={rule.nodeName}
-                data={this.props.data}
-                onChange={this.handleChildUpdate} />);
+              return (
+                <Rule
+                  key={index}
+                  buttonsText={this.props.buttonsText}
+                  fields={this.props.fields}
+                  operators={this.props.config.operators}
+                  nodeName={rule.nodeName}
+                  data={this.props.data}
+                  onChange={this.handleChildUpdate}
+                  styles={this.props.config.styles}
+                />);
             }
+            return (<Condition
+              key={index}
+              config={this.props.config}
+              buttonsText={this.props.buttonsText}
+              fields={this.props.fields}
+              nodeName={rule.nodeName}
+              data={this.props.data}
+              onChange={this.handleChildUpdate}
+            />);
           })}
       </div>
     );

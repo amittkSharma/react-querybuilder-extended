@@ -1,3 +1,3 @@
-import TwoWayQuerybuilder from './TwoWayQuerybuilder';
+import QuerybuilderExtended from './QuerybuilderExtended';
 
-export default TwoWayQuerybuilder;
+export default QuerybuilderExtended;

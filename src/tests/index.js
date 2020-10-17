@@ -41,14 +41,14 @@ describe('Query Parser', function () {
       const result = QueryParser.createTokenObject(token, operators);
       assert.equal(result.field, 'Firstname');
       assert.equal(result.operator, '=');
-      assert.equal(result.value, "kek");
+      assert.equal(result.value, 'kek');
     });
     it('should return token object without extra space', function () {
       const token = "Firstname IN 'kek, john'";
       const result = QueryParser.createTokenObject(token, operators);
       assert.equal(result.field, 'Firstname');
       assert.equal(result.operator, 'IN');
-      assert.equal(result.value, "kek, john");
+      assert.equal(result.value, 'kek, john');
     });
   });
 
@@ -60,12 +60,12 @@ describe('Query Parser', function () {
       const expectedResult = [
         '(',
         '(',
-        { field: 'Firstname', operator: '=', value: "kek" },
+        { field: 'Firstname', operator: '=', value: 'kek' },
         'AND',
-        { field: 'Firstname', operator: '=', value: "kek1" },
+        { field: 'Firstname', operator: '=', value: 'kek1' },
         ')',
         'OR',
-        { field: 'Firstname', operator: '=', value: "kek3" },
+        { field: 'Firstname', operator: '=', value: 'kek3' },
         ')',
       ];
       assert.deepEqual(result, expectedResult);

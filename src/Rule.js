@@ -24,7 +24,7 @@ class Rule extends React.Component {
     this.node = this.treeHelper.getNodeByName(this.props.nodeName);
     this.styles = this.props.styles;
 
-    let field = this.getFieldByName(this.node.field);
+    const field = this.getFieldByName(this.node.field);
     this.state = {
       currField: this.generateRuleObject(field, this.node),
       validationError: false,
@@ -84,7 +84,11 @@ class Rule extends React.Component {
           }
         </div>);
       case 'select': return (
-        <select className={this.styles.select} onChange={this.onInputChanged} value={this.node.value}>
+        <select
+          className={this.styles.select}
+          onChange={this.onInputChanged}
+          value={this.node.value}
+        >
           {this.state.currField.input.options.map((option, index) =>
             <option value={option.value} key={index}>{option.name}</option>)}
         </select>);
@@ -107,7 +111,7 @@ class Rule extends React.Component {
   generateRuleObject(field, node) {
     const rule = {};
     rule.input = field.input;
-    node = node ? node : this.treeHelper.getNodeByName(this.props.nodeName);
+    node = node || this.treeHelper.getNodeByName(this.props.nodeName);
     rule.input.value = node.value;
     if (!field.operators || typeof (field.operators) === 'string') {
       rule.operators = this.props.operators;
@@ -115,9 +119,9 @@ class Rule extends React.Component {
     }
     const ruleOperators = [];
     for (let i = 0, length = field.operators.length; i < length; i += 1) {
-      for (let opIndex = 0, opLength = this.props.operators.length; opIndex < opLength; opIndex += 1) {
-        if (field.operators[i] === this.props.operators[opIndex].operator) {
-          ruleOperators.push(this.props.operators[opIndex]);
+      for (let opIndx = 0, opLength = this.props.operators.length; opIndx < opLength; opIndx += 1) {
+        if (field.operators[i] === this.props.operators[opIndx].operator) {
+          ruleOperators.push(this.props.operators[opIndx]);
         }
       }
     }

@@ -1,6 +1,6 @@
 import { action, storiesOf } from '@kadira/storybook';
 import React from 'react';
-import TwoWayQuerybuilder from '../../src/TwoWayQuerybuilder';
+import QuerybuilderExtended from '../../src/QuerybuilderExtended';
 import './index.css';
 
 const config = {
@@ -64,20 +64,20 @@ const changedStyles = {
 
 storiesOf('Query builder', module)
   .add('default view', () => (
-    <TwoWayQuerybuilder fields={defaultFields} onChange={action('data changed')} />
+    <QuerybuilderExtended fields={defaultFields} onChange={action('data changed')} />
   ))
   .add('existing query', () => (
-    <TwoWayQuerybuilder config={config} fields={defaultFields} onChange={action('data changed')} />
+    <QuerybuilderExtended config={config} fields={defaultFields} onChange={action('data changed')} />
   ))
   .add('changed input types', () => (
-    <TwoWayQuerybuilder fields={changedFields} onChange={action('data changed')} />
+    <QuerybuilderExtended fields={changedFields} onChange={action('data changed')} />
   ))
   .add('custom styles', () => (
-    <TwoWayQuerybuilder config={changedStyles} fields={defaultFields} onChange={action('data changed')} />
+    <QuerybuilderExtended config={changedStyles} fields={defaultFields} onChange={action('data changed')} />
   ))
   .add('validation', () => (
-    <TwoWayQuerybuilder fields={validationFields} onChange={action('data changed')} />
+    <QuerybuilderExtended fields={validationFields} onChange={action('data changed')} />
   ))
   .add('existing query and changed input types', () => (
-    <TwoWayQuerybuilder fields={changedFields} config={dropdownconfig} onChange={action('data changed')} />
+    <QuerybuilderExtended fields={changedFields} config={dropdownconfig} onChange={action('data changed')} />
   ));

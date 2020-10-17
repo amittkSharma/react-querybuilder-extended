@@ -1,5 +1,5 @@
-import TreeHelper from './TreeHelper';
 import ASTree from './ASTree';
+import TreeHelper from './TreeHelper';
 
 export default class QueryParser {
 
@@ -26,7 +26,7 @@ export default class QueryParser {
   }
 
   static convertSyntaxTreeToData(element, data, combinators, nodeName, combNodeName) {
-    data = data ? data : {};
+    data = data || {};
     let newCombName = combNodeName;
     const firstCombinator = this.getFirstCombinator(element, combinators);
     const treeHelper = new TreeHelper(data);
@@ -132,7 +132,8 @@ export default class QueryParser {
   }
 
   static getFirstCombinator(element, combinators) {
-    let foundCombinator = element.children.find(x => combinators.find(y => y.combinator === x.value));
+    let foundCombinator = element.children
+                          .find(x => combinators.find(y => y.combinator === x.value));
     if (!foundCombinator) {
       for (let i = 0; i < element.children.length; i += 1) {
         foundCombinator = this.getFirstCombinator(element.children[i], combinators);
